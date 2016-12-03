@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "production": "webpack -p",
-	"start": "webpack-dev-server"
+    "start": "webpack-dev-server"
   },
   "author": "dh",
   "license": "ISC",
@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "react-dom": "^15.4.1",
+    "react-router": "^2.0.0-rc5"
   }
 }
