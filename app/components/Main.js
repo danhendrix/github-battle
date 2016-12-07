@@ -1,6 +1,5 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var exports = module.exports;
 
 var Main = React.createClass({
 	render: function(){
