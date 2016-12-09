@@ -1,25 +1,21 @@
 var React = require('react');
-var ReactDOM = require('react-dom');
+var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
+require('../main.css');
 
 var Main = React.createClass({
 	render: function(){
 		return (
-			<div>  
-			{this.props.children}
+			<div className='main-container'>
+				<ReactCSSTransitionGroup 
+					transitionName='appear'
+					transitionEnterTimeout={500}
+					transitionLeaveTimeout={500}> 
+					{React.cloneElement(this.props.children, {key: this.props.location.pathname})}
+				</ReactCSSTransitionGroup>
 			</div>
 		)
 	}
 });
 
 module.exports = Main;
-
-// var sayHi = function(props){
-	// return (
-		// <div>{props.name}</div>
-		// )
-// }
-
-
-// ReactDOM.render(<sayHi name='Danny' />,document.getElementById('app'));
-
 
